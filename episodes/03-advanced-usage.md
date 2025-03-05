@@ -5,11 +5,11 @@ In this episode, we explore advanced Tmux features including session management,
 
 ## Script
 
-### Command Mode
+## Command Mode
 Tmux has a powerful command mode accessible with `prefix + :` that allows direct execution of tmux commands.
 
 Common commands:
-```
+```bash
 # Create new window
 :new-window -n name
 
@@ -28,7 +28,7 @@ Common commands:
 :select-layout tiled
 ```
 
-### Layouts
+## Layouts
 Tmux provides several built-in layouts that you can cycle through:
 
 - `prefix + space`: Cycle through layouts
@@ -38,10 +38,10 @@ Tmux provides several built-in layouts that you can cycle through:
 - `prefix + Alt-4`: Main vertical layout
 - `prefix + Alt-5`: Tiled layout
 
-### Synchronized Panes
+## Synchronized Panes
 You can send the same commands to multiple panes simultaneously:
 
-```
+```bash
 # Enable synchronized panes
 :setw synchronize-panes on
 
@@ -51,7 +51,7 @@ You can send the same commands to multiple panes simultaneously:
 
 This is extremely useful for managing multiple servers or running the same commands across different environments.
 
-### Advanced Copy Mode
+## Advanced Copy Mode
 Using copy mode with vim keybindings for efficient text selection:
 
 1. Enter copy mode: `prefix + [`
@@ -60,10 +60,10 @@ Using copy mode with vim keybindings for efficient text selection:
 4. Yank text: `y`
 5. Paste text: `prefix + ]`
 
-### Window and Session Management
+## Window and Session Management
 
-#### Session Management
-```
+## Session Management
+```bash
 # Create a new session
 :new-session -s name
 
@@ -77,8 +77,8 @@ Using copy mode with vim keybindings for efficient text selection:
 :list-sessions
 ```
 
-#### Window Management
-```
+## Window Management
+```bash
 # Move window to a different position
 :move-window -t 3
 
@@ -89,7 +89,7 @@ Using copy mode with vim keybindings for efficient text selection:
 :link-window -s othersession:2 -t 5
 ```
 
-### Pane Synchronization for Multi-Server Management
+## Pane Synchronization for Multi-Server Management
 Demo: Using synchronized panes to manage multiple servers simultaneously
 1. Creating multiple panes
 2. Connecting to different servers
@@ -97,7 +97,7 @@ Demo: Using synchronized panes to manage multiple servers simultaneously
 4. Running commands across all servers
 5. Disabling synchronization
 
-### Scripting Tmux
+## Scripting Tmux
 You can automate Tmux setup using shell scripts:
 
 ```bash
@@ -122,7 +122,7 @@ tmux send-keys -t dev:0.2 'git status' C-m
 tmux attach-session -t dev
 ```
 
-### Shared Sessions
+## Shared Sessions
 Multiple users can connect to the same Tmux session:
 
 User 1:
@@ -169,5 +169,5 @@ The video will include a live demo showing:
 5. Create a script that uses named pipes to control a Tmux session
 
 ## Resources
-- [Sample Tmux Scripting Examples](/scripts/dev-environment-setup.sh)
-- [Advanced Tmux Commands Cheatsheet](/cheatsheets/tmux-advanced.md)
+- [Sample Tmux Scripting Examples](../scripts/dev-environment-setup.sh)
+- [Advanced Tmux Commands Cheatsheet](../cheatsheets/tmux-advanced.md)

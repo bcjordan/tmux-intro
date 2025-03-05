@@ -5,35 +5,35 @@ Windows in tmux are similar to tabs in a browser. Each window occupies the entir
 ## Creating Windows
 
 To create a new window:
-```
+```bash
 Prefix + c
 ```
 
 ## Navigating Between Windows
 
 To navigate between windows:
-```
+```bash
 Prefix + n    # Next window
 Prefix + p    # Previous window
 Prefix + [0-9] # Window by number
 ```
 
 You can also list all windows and select one:
-```
+```bash
 Prefix + w
 ```
 
 ## Renaming Windows
 
 By default, windows are named with the command running in them. To rename a window:
-```
+```bash
 Prefix + ,
 ```
 
 ## Reordering Windows
 
 To move the current window to a different position:
-```
+```bash
 Prefix + .
 ```
 When prompted, enter the window position number.
@@ -41,7 +41,7 @@ When prompted, enter the window position number.
 ## Closing Windows
 
 To close the current window:
-```
+```bash
 Prefix + &
 ```
 You will be asked to confirm before closing.
@@ -49,7 +49,7 @@ You will be asked to confirm before closing.
 ## Finding Windows
 
 To find a window by name:
-```
+```bash
 Prefix + f
 ```
 Enter a search string, and tmux will select the window that matches.
@@ -58,7 +58,7 @@ Enter a search string, and tmux will select the window that matches.
 
 The status bar at the bottom of tmux shows your windows with their numbers and names:
 
-```
+```bash
 [0] bash  [1] vim* [2] htop
 ```
 
@@ -68,7 +68,7 @@ The `*` indicates the current window.
 
 You can set options for specific windows. For example, to monitor a window for activity:
 
-```
+```bash
 # Inside tmux
 Prefix + :
 setw -g monitor-activity on

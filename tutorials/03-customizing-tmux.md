@@ -33,7 +33,7 @@ set -g prefix C-a
 bind C-a send-prefix
 ```
 
-### Mouse Mode
+## Mouse Mode
 
 Enable mouse support for selecting panes, resizing panes, and scrolling:
 
@@ -41,7 +41,7 @@ Enable mouse support for selecting panes, resizing panes, and scrolling:
 set -g mouse on
 ```
 
-### Customizing the Status Bar
+## Customizing the Status Bar
 
 The status bar can be customized with different colors and information:
 
@@ -58,7 +58,7 @@ set -g status-left-length 20
 set -g status-right '#[fg=yellow]#(date "+%H:%M")'
 ```
 
-### Pane and Window Navigation
+## Pane and Window Navigation
 
 Create easier bindings for navigating between panes and windows:
 
@@ -74,7 +74,7 @@ bind -n S-Left previous-window
 bind -n S-Right next-window
 ```
 
-### Changing Split Pane Shortcuts
+## Changing Split Pane Shortcuts
 
 Make split pane shortcuts more intuitive:
 
@@ -86,7 +86,7 @@ unbind '"'
 unbind %
 ```
 
-### Enabling Vi Mode
+## Enabling Vi Mode
 
 Enable vi-style navigation in copy mode:
 
@@ -120,7 +120,7 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 run '~/.tmux/plugins/tpm/tpm'
 ```
 
-### Popular Plugins
+## Popular Plugins
 
 - **tmux-resurrect**: Save and restore tmux sessions
   ```bash

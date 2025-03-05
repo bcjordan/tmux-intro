@@ -5,20 +5,20 @@ In this first episode, we introduce Tmux, explain its benefits, and guide you th
 
 ## Script
 
-### What is Tmux?
+## What is Tmux?
 - Terminal multiplexer
 - Allows multiple virtual terminals within a single window
 - Sessions persist even when you disconnect
 - Share sessions between multiple users
 
-### Why Use Tmux?
+## Why Use Tmux?
 - Enhanced productivity with multiple terminal panes
 - Session persistence across disconnections
 - Easy window management
 - Scriptable and customizable
 - Perfect for remote work and SSH connections
 
-### Installation
+## Installation
 ```bash
 # macOS
 brew install tmux
@@ -30,14 +30,14 @@ sudo apt install tmux
 sudo dnf install tmux
 ```
 
-### Basic Commands
+## Basic Commands
 - `tmux` - Start a new session
 - `tmux new -s mysession` - Start a named session
 - `tmux ls` - List sessions
 - `tmux attach -t mysession` - Attach to a session
 - `tmux kill-session -t mysession` - Kill a session
 
-### Key Bindings
+## Key Bindings
 All commands in tmux are triggered by a prefix key (default: Ctrl+b) followed by a command key.
 
 - `Ctrl+b c` - Create a new window
@@ -65,5 +65,5 @@ The video will include a live demo showing:
 
 ## Resources
 - [Tmux GitHub Repository](https://github.com/tmux/tmux)
-- [Tmux Cheat Sheet](/cheatsheets/tmux-basics.md)
-- [Sample Tmux Configuration](/configs/tmux.conf)
+- [Tmux Cheat Sheet](../cheatsheets/tmux-basics.md)
+- [Sample Tmux Configuration](../configs/tmux.conf)

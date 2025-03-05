@@ -5,14 +5,14 @@ In this episode, we explore how to customize Tmux to improve your workflow, incl
 
 ## Script
 
-### Introduction to Tmux Configuration
+## Introduction to Tmux Configuration
 - Configuration file: `~/.tmux.conf`
 - Reload config: `tmux source-file ~/.tmux.conf`
 - Command syntax in config files
 
-### Basic Customizations
+## Basic Customizations
 
-#### Changing the Prefix Key
+## Changing the Prefix Key
 Many users prefer to use `Ctrl+a` instead of the default `Ctrl+b`:
 
 ```bash
@@ -22,13 +22,13 @@ set -g prefix C-a
 bind C-a send-prefix
 ```
 
-#### Improving Colors
+## Improving Colors
 ```bash
 # Improve colors
 set -g default-terminal "screen-256color"
 ```
 
-#### Setting the Status Bar
+## Setting the Status Bar
 ```bash
 # Basic status bar colors
 set -g status-fg white
@@ -53,14 +53,14 @@ setw -g window-status-current-format " #I:#W "
 setw -g window-status-current-style fg=black,bg=green
 ```
 
-#### Better Window Splitting
+## Better Window Splitting
 ```bash
 # More intuitive window splitting keys
 bind | split-window -h
 bind - split-window -v
 ```
 
-#### Vim-style Navigation
+## Vim-style Navigation
 For Vim users, these bindings make pane navigation more intuitive:
 
 ```bash
@@ -77,13 +77,13 @@ bind -r K resize-pane -U 5
 bind -r L resize-pane -R 5
 ```
 
-#### Mouse Support
+## Mouse Support
 ```bash
 # Enable mouse mode
 set -g mouse on
 ```
 
-#### Window/Pane Numbering
+## Window/Pane Numbering
 ```bash
 # Start numbering windows and panes at 1, not 0
 set -g base-index 1
@@ -93,9 +93,9 @@ setw -g pane-base-index 1
 set -g renumber-windows on
 ```
 
-### Advanced Customizations
+## Advanced Customizations
 
-#### Vi Mode for Copy/Paste
+## Vi Mode for Copy/Paste
 ```bash
 # Use vi keys in copy mode
 setw -g mode-keys vi
@@ -105,20 +105,20 @@ bind-key -T copy-mode-vi v send-keys -X begin-selection
 bind-key -T copy-mode-vi y send-keys -X copy-selection
 ```
 
-#### Session Management
+## Session Management
 ```bash
 # Quick session switching
 bind-key S choose-session
 ```
 
-#### Window Activity Monitoring
+## Window Activity Monitoring
 ```bash
 # Activity monitoring
 setw -g monitor-activity on
 set -g visual-activity on
 ```
 
-### Using Plugins with Tmux Plugin Manager (TPM)
+## Using Plugins with Tmux Plugin Manager (TPM)
 
 1. Installing TPM:
 ```bash
@@ -153,6 +153,6 @@ The video will include a live demo showing:
 5. Install at least one TMux plugin
 
 ## Resources
-- [Sample Tmux Configuration](/configs/tmux.conf)
+- [Sample Tmux Configuration](../configs/tmux.conf)
 - [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
-- [Popular Tmux Plugins](/cheatsheets/tmux-plugins.md)
+- [Popular Tmux Plugins](../cheatsheets/tmux-plugins.md)

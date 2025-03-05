@@ -5,9 +5,9 @@ In this episode, we explore common Tmux issues, their solutions, and dive into a
 
 ## Script
 
-### Common Issues and Solutions
+## Common Issues and Solutions
 
-#### Key Binding Conflicts
+## Key Binding Conflicts
 Problem: Some key bindings don't work or conflict with other applications.
 
 Solutions:
@@ -23,7 +23,7 @@ set -g xterm-keys on
 set -g default-terminal "screen-256color"
 ```
 
-#### Copy-Paste Problems
+## Copy-Paste Problems
 Problem: Copy and paste don't work as expected across different systems.
 
 Solutions:
@@ -40,7 +40,7 @@ if-shell "uname | grep -q Linux" {
 }
 ```
 
-#### Pane and Window Navigation Issues
+## Pane and Window Navigation Issues
 Problem: Difficulty navigating between many panes or windows.
 
 Solutions:
@@ -56,7 +56,7 @@ bind -n C-k run "(tmux display-message -p '#{pane_current_command}' | grep -iq v
 bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys C-l) || tmux select-pane -R"
 ```
 
-#### Color and Display Issues
+## Color and Display Issues
 Problem: Colors don't display correctly or theme looks wrong.
 
 Solutions:
@@ -70,9 +70,9 @@ set -q -g status-utf8 on
 setw -q -g utf8 on
 ```
 
-### Performance Optimization
+## Performance Optimization
 
-#### Reducing Latency
+### Reducing Latency
 ```bash
 # Reduce escape-time delay
 set -sg escape-time 0
@@ -84,7 +84,7 @@ set -g repeat-time 300
 set -g history-limit 50000
 ```
 
-#### Managing Status Bar Updates
+## Managing Status Bar Updates
 ```bash
 # Reduce status bar update frequency (saves CPU)
 set -g status-interval 5
@@ -94,7 +94,7 @@ set -g status-left "#[fg=green]#S"
 set -g status-right "#[fg=yellow]%H:%M"
 ```
 
-#### Optimizing for Remote Connections
+## Optimizing for Remote Connections
 ```bash
 # Reduce visual bells and activity notifications
 set -g visual-activity off
@@ -104,9 +104,9 @@ setw -g monitor-activity off
 set -g bell-action none
 ```
 
-### Security Considerations
+## Security Considerations
 
-#### Socket Permissions
+## Socket Permissions
 When creating shared sessions, be careful with socket permissions:
 
 ```bash
@@ -121,7 +121,7 @@ tmux -S /path/to/socket new -s shared
 chmod 770 /path/to/socket  # Owner and group members can access
 ```
 
-#### Managing Logging and Output Capture
+## Managing Logging and Output Capture
 Be careful with logging sensitive information:
 
 ```bash
@@ -130,15 +130,15 @@ bind-key L pipe-pane -o "cat >>~/tmux-#S-#W-#P.log" \; display-message "Logging 
 bind-key l pipe-pane \; display-message "Logging ended"
 ```
 
-#### Securing Clipboard Operations
+## Securing Clipboard Operations
 ```bash
 # Disable auto-clipboard operations if security is a concern
 set -g set-clipboard off
 ```
 
-### Extending Tmux
+## Extending Tmux
 
-#### Creating Custom Menus
+## Creating Custom Menus
 ```bash
 # Create a custom menu
 bind-key m display-menu -T "#[align=centre]Menu" \
@@ -158,7 +158,7 @@ bind-key m display-menu -T "#[align=centre]Menu" \
   "Rename Session" R "command-prompt -I \"#S\" \"rename-session -- '%%'\""
 ```
 
-#### Writing Custom Scripts
+## Writing Custom Scripts
 Example of a script to create a development environment:
 
 ```bash
@@ -187,9 +187,9 @@ tmux send-keys -t dev:0.2 'cd ~/projects/current && ls -la' C-m
 tmux attach-session -t dev
 ```
 
-#### Integration with Other Tools
+## Integration with Other Tools
 
-##### Integrating with Vim
+#### Integrating with Vim
 Using [Vim-Tmux-Navigator](https://github.com/christoomey/vim-tmux-navigator) for seamless navigation:
 
 ```bash
@@ -202,7 +202,7 @@ bind-key -n 'C-k' if-shell "$is_vim" 'send-keys C-k'  'select-pane -U'
 bind-key -n 'C-l' if-shell "$is_vim" 'send-keys C-l'  'select-pane -R'
 ```
 
-##### Integrating with FZF
+### Integrating with FZF
 Using fzf for fuzzy finding:
 
 ```bash
@@ -236,9 +236,9 @@ fi
 tmux switch-client -t $selected_name
 ```
 
-### Debugging Tmux
+## Debugging Tmux
 
-#### Verbose Logging
+## Verbose Logging
 Enable detailed logging to diagnose issues:
 
 ```bash
@@ -247,7 +247,7 @@ tmux -v
 tmux -vv
 ```
 
-#### Checking the Running Configuration
+## Checking the Running Configuration
 Dump the current configuration for inspection:
 
 ```bash
@@ -255,7 +255,7 @@ tmux show-options -g       # Show global options
 tmux show-window-options -g # Show window options
 ```
 
-#### Inspecting Key Bindings
+## Inspecting Key Bindings
 List all key bindings to find conflicts:
 
 ```bash
@@ -280,5 +280,5 @@ The video will include live demos showing:
 5. Optimize your Tmux configuration for performance
 
 ## Resources
-- [Advanced Troubleshooting Guide](/cheatsheets/tmux-troubleshooting.md)
-- [Security Best Practices](/docs/tmux-security.md)
+- [Advanced Troubleshooting Guide](../cheatsheets/tmux-troubleshooting.md)
+- [Security Best Practices](../docs/tmux-security.md)

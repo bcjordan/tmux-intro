@@ -11,7 +11,7 @@ brew install tmux
 sudo port install tmux
 ```
 
-### Linux
+## Linux
 ```bash
 # Debian/Ubuntu
 sudo apt install tmux
@@ -23,7 +23,7 @@ sudo dnf install tmux
 sudo pacman -S tmux
 ```
 
-### Windows
+## Windows
 On Windows, you can use tmux through WSL (Windows Subsystem for Linux):
 1. Install WSL following [Microsoft's guide](https://docs.microsoft.com/en-us/windows/wsl/install)
 2. Install tmux in your WSL distribution using the Linux instructions above
@@ -39,7 +39,7 @@ tmux
 tmux new -s session-name
 ```
 
-### Session Management
+## Session Management
 ```bash
 # Detach from current session
 Ctrl+b d
@@ -51,7 +51,7 @@ tmux ls
 tmux attach -t session-name
 ```
 
-### Window Management
+## Window Management
 ```bash
 # Create a new window
 Ctrl+b c
@@ -66,7 +66,7 @@ Ctrl+b p
 Ctrl+b [0-9]
 ```
 
-### Pane Management
+## Pane Management
 ```bash
 # Split pane horizontally
 Ctrl+b %

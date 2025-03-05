@@ -15,86 +15,86 @@
 - How configuration works
 - Reloading configuration: `tmux source-file ~/.tmux.conf`
 - Creating an easy reload binding:
-  ```
+  ```bash
   bind r source-file ~/.tmux.conf \; display "Config reloaded!"
   ```
 
 ## Essential Configuration Options (5 minutes)
 - Changing the prefix key:
-  ```
+  ```bash
   unbind C-b
   set -g prefix C-a
   bind C-a send-prefix
   ```
 - Starting window/pane index at 1:
-  ```
+  ```bash
   set -g base-index 1
   setw -g pane-base-index 1
   ```
 - Increase history limit:
-  ```
+  ```bash
   set -g history-limit 10000
   ```
 - Enable mouse support:
-  ```
+  ```bash
   set -g mouse on
   ```
 - Set terminal colors:
-  ```
+  ```bash
   set -g default-terminal "screen-256color"
   ```
 
 ## Better Key Bindings (5 minutes)
 - Intuitive window splitting:
-  ```
+  ```bash
   bind | split-window -h
   bind - split-window -v
   unbind '"'
   unbind %
   ```
 - Vim-style pane navigation:
-  ```
+  ```bash
   bind h select-pane -L
   bind j select-pane -D
   bind k select-pane -U
   bind l select-pane -R
   ```
 - Quick window movement:
-  ```
+  ```bash
   bind -n M-Left previous-window
   bind -n M-Right next-window
   ```
 - Better session management:
-  ```
+  ```bash
   bind S command-prompt -p "New Session:" "new-session -A -s '%%'"
   bind K confirm kill-session
   ```
 
 ## Status Bar Customization (5 minutes)
 - Basic status bar options:
-  ```
+  ```bash
   set -g status-position top
   set -g status-style bg=black,fg=white
   set -g status-left-length 40
   set -g status-right-length 60
   ```
 - Custom status left format:
-  ```
+  ```bash
   set -g status-left "#[fg=green]Session: #S #[fg=yellow]Window: #I #[fg=cyan]Pane: #P"
   ```
 - Custom status right format:
-  ```
+  ```bash
   set -g status-right "#[fg=cyan]%d %b %Y #[fg=yellow]%H:%M"
   ```
 - Window status formatting:
-  ```
+  ```bash
   setw -g window-status-current-style fg=black,bg=white,bold
   setw -g window-status-current-format ' #I:#W#F '
   ```
 
 ## Activity Monitoring (3 minutes)
 - Setting up activity alerts:
-  ```
+  ```bash
   setw -g monitor-activity on
   set -g visual-activity on
   ```
@@ -103,11 +103,11 @@
 
 ## Advanced Configuration Techniques (5 minutes)
 - Conditional configuration based on Tmux version:
-  ```
+  ```bash
   if-shell "tmux -V | grep -q 'tmux [0-1]\\|tmux 2\\.[0-4]'" "set -g status-fg white; set -g status-bg black" "set -g status-style fg=white,bg=black"
   ```
 - Running shell commands in config:
-  ```
+  ```bash
   run-shell "if command -v reattach-to-user-namespace > /dev/null; then echo 'reattach exists'; else echo 'reattach missing'; fi"
   ```
 - Platform-specific configurations
@@ -115,11 +115,11 @@
 
 ## Configuring Vi Mode for Copy/Paste (4 minutes)
 - Enabling Vi mode:
-  ```
+  ```bash
   setw -g mode-keys vi
   ```
 - Vi-style copy mode bindings:
-  ```
+  ```bash
   bind -T copy-mode-vi v send -X begin-selection
   bind -T copy-mode-vi y send -X copy-selection-and-cancel
   ```

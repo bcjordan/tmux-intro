@@ -6,7 +6,7 @@ Panes allow you to divide a tmux window into multiple sections, each running its
 
 To split the current pane:
 
-```
+```bash
 Prefix + %   # Split horizontally (left/right)
 Prefix + "   # Split vertically (top/bottom)
 ```
@@ -15,7 +15,7 @@ Prefix + "   # Split vertically (top/bottom)
 
 There are several ways to navigate between panes:
 
-```
+```bash
 Prefix + arrow keys   # Move to pane in that direction
 Prefix + o            # Cycle through panes
 Prefix + q            # Show pane numbers, then press the number to select
@@ -25,14 +25,14 @@ Prefix + q            # Show pane numbers, then press the number to select
 
 To resize the current pane:
 
-```
+```bash
 Prefix + Ctrl + arrow keys  # Resize in that direction
 Prefix + Alt + arrow keys   # Resize in 5-cell increments
 ```
 
 You can also use specific resize commands:
 
-```
+```bash
 # In command mode (Prefix + :)
 resize-pane -D 10    # Resize down by 10 cells
 resize-pane -U 10    # Resize up by 10 cells
@@ -44,7 +44,7 @@ resize-pane -R 10    # Resize right by 10 cells
 
 tmux provides several built-in layouts that you can cycle through:
 
-```
+```bash
 Prefix + space  # Cycle through layouts
 ```
 
@@ -62,7 +62,7 @@ For visual examples, see [pane-layouts.md](../assets/pane-layouts.md).
 
 To temporarily expand a pane to full window size and back:
 
-```
+```bash
 Prefix + z
 ```
 
@@ -70,7 +70,7 @@ Prefix + z
 
 To change the position of panes:
 
-```
+```bash
 Prefix + {   # Move current pane left
 Prefix + }   # Move current pane right
 ```
@@ -79,13 +79,13 @@ Prefix + }   # Move current pane right
 
 To convert a pane to a window:
 
-```
+```bash
 Prefix + !
 ```
 
 To join a window as a pane to the current window:
 
-```
+```bash
 # In command mode (Prefix + :)
 join-pane -s window_number
 ```
@@ -94,7 +94,7 @@ join-pane -s window_number
 
 To close the current pane:
 
-```
+```bash
 Prefix + x
 ```
 
@@ -102,7 +102,7 @@ Prefix + x
 
 To send the same commands to all panes in a window:
 
-```
+```bash
 # In command mode (Prefix + :)
 setw synchronize-panes on  # Enable
 setw synchronize-panes off # Disable

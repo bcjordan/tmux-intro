@@ -5,9 +5,9 @@ In this episode, we explore practical workflows and real-world use cases for Tmu
 
 ## Script
 
-### Developer Workflow
+## Developer Workflow
 
-#### Local Development Environment
+### Local Development Environment
 Setting up the perfect development environment:
 
 1. Create a session for each project
@@ -24,7 +24,7 @@ tmux new -s project-name
 
 3. Use a scripted setup (see our sample scripts)
 
-#### Version Control Workflow
+### Version Control Workflow
 Using Tmux for effective git workflows:
 
 ```bash
@@ -39,7 +39,7 @@ Split the git window to show:
 - Commit history
 - Branch visualization
 
-#### Database Development
+## Database Development
 Working with databases efficiently:
 
 ```bash
@@ -49,9 +49,9 @@ Working with databases efficiently:
 # Window 4: Documentation
 ```
 
-### DevOps Workflows
+## DevOps Workflows
 
-#### Server Management
+### Server Management
 Managing multiple servers simultaneously:
 
 1. Create a window with multiple panes
@@ -59,7 +59,7 @@ Managing multiple servers simultaneously:
 3. Use synchronized panes for common operations
 4. Disable sync for server-specific tasks
 
-#### Monitoring and Logging
+### Monitoring and Logging
 Set up a monitoring dashboard:
 
 ```bash
@@ -69,7 +69,7 @@ Set up a monitoring dashboard:
 # Window 4: Custom monitoring scripts
 ```
 
-#### Deployment Pipeline
+## Deployment Pipeline
 Streamline your deployment process:
 
 ```bash
@@ -80,9 +80,9 @@ Streamline your deployment process:
 # Window 5: Monitoring
 ```
 
-### Remote Work Scenarios
+## Remote Work Scenarios
 
-#### SSH Session Management
+### SSH Session Management
 Using Tmux on remote servers to maintain persistent sessions:
 
 1. SSH to server
@@ -90,7 +90,7 @@ Using Tmux on remote servers to maintain persistent sessions:
 3. Work freely without fear of disconnection
 4. Detach when done, keeping processes running
 
-#### Remote Pair Programming
+### Remote Pair Programming
 Collaborative coding with colleagues:
 
 ```bash
@@ -107,9 +107,9 @@ Tips for effective pair programming with Tmux:
 - Define clear roles (driver/navigator)
 - Use a shared status indicator to show who's typing
 
-### Specialized Workflows
+## Specialized Workflows
 
-#### Data Science Workflow
+### Data Science Workflow
 Organize your data analysis environment:
 
 ```bash
@@ -119,7 +119,7 @@ Organize your data analysis environment:
 # Window 4: Dataset exploration with command-line tools
 ```
 
-#### System Administration
+## System Administration
 Efficiently manage system administration tasks:
 
 ```bash
@@ -129,9 +129,9 @@ Efficiently manage system administration tasks:
 # Window 4: Shell for ad-hoc commands
 ```
 
-### Integrating with Other Tools
+## Integrating with Other Tools
 
-#### Vim Integration
+### Vim Integration
 For Vim users, enhance the integration with:
 
 ```vim
@@ -157,7 +157,7 @@ if exists('$TMUX')
 endif
 ```
 
-#### IDE-like Experience
+### IDE-like Experience
 Create a full IDE-like experience with:
 - File explorer (using tools like ranger, nnn, or vifm)
 - Code navigation (using ctags, fzf)
@@ -207,5 +207,5 @@ The video will include live demos of:
 4. Integrate Tmux with your favorite editor
 
 ## Resources
-- [Sample Developer Environment Script](/scripts/dev-environment-setup.sh)
-- [Remote Pair Programming Guide](/exercises/pair-programming.md)
+- [Sample Developer Environment Script](../scripts/dev-environment-setup.sh)
+- [Remote Pair Programming Guide](../exercises/pair-programming.md)
