@@ -10,8 +10,8 @@ This repository contains all the materials for the Tmux tutorial series, providi
 
 1. Clone this repository
    ```bash
-   git clone https://github.com/yourusername/tmux-vids.git
-   cd tmux-vids
+   git clone https://github.com/bcjordan/tmux-intro.git
+   cd tmux-intro
    ```
 
 2. Install Tmux on your system
