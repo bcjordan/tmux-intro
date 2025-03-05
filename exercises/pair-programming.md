@@ -12,9 +12,9 @@ This guide will help you set up and effectively use Tmux for remote pair program
 
 ## Setting Up a Shared Session
 
-### Method 1: Using a Socket File (Same Machine)
+## Method 1: Using a Socket File (Same Machine)
 
-#### Host (User 1)
+### Host (User 1)
 ```bash
 # Create a new session with a shared socket
 tmux -S /tmp/pair-session new -s pair
@@ -23,21 +23,21 @@ tmux -S /tmp/pair-session new -s pair
 chmod 777 /tmp/pair-session
 ```
 
-#### Guest (User 2)
+### Guest (User 2)
 ```bash
 # Attach to the shared session
 tmux -S /tmp/pair-session attach -t pair
 ```
 
-### Method 2: Using SSH (Remote Machines)
+## Method 2: Using SSH (Remote Machines)
 
-#### Host (User 1)
+### Host (User 1)
 ```bash
 # On the server, create a new tmux session
 tmux new -s pair
 ```
 
-#### Guest (User 2)
+### Guest (User 2)
 ```bash
 # SSH to the server and attach to the session
 ssh user@server
@@ -46,7 +46,7 @@ tmux attach -t pair
 
 ## Best Practices for Pair Programming
 
-### Communication
+## Communication
 
 1. **Establish clear roles**:
    - **Driver**: Person actively typing code
@@ -63,7 +63,7 @@ tmux attach -t pair
    nc localhost 8888  # On the other side
    ```
 
-### Visual Indicators
+## Visual Indicators
 
 1. **Customize the status bar to show who's active**:
    ```bash
@@ -80,7 +80,7 @@ tmux attach -t pair
    tmux select-pane -t:.2 -P 'bg=black,fg=blue'
    ```
 
-### Workflow Tips
+## Workflow Tips
 
 1. **Create a dedicated "communication" pane**:
    ```bash
@@ -166,22 +166,22 @@ tmux -f ~/.tmux-pair.conf new -s pair
 
 ## Common Issues and Solutions
 
-### Problem: Input lag
+## Problem: Input lag
 **Solution**: Adjust the Tmux escape-time setting
 ```bash
 set -sg escape-time 0
 ```
 
-### Problem: Screen size differences
+## Problem: Screen size differences
 **Solution**: Use Tmux's aggressive-resize option
 ```bash
 setw -g aggressive-resize on
 ```
 
-### Problem: Unclear who's typing
+## Problem: Unclear who's typing
 **Solution**: Add more obvious visual indicators to the status bar
 
-### Problem: Confusion with prefixes
+## Problem: Confusion with prefixes
 **Solution**: Agree on a shared Tmux prefix (Ctrl+a is often easier to type than the default Ctrl+b)
 
 ## Conclusion

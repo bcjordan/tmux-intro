@@ -20,12 +20,12 @@ This exercise will help you practice advanced Tmux techniques and customization 
    - Configure intuitive pane splitting (| for vertical, - for horizontal)
 
 2. Test your configuration by loading it with:
-   ```
+   ```bash
    tmux source-file ~/.tmux.conf
    ```
 
 3. Add a binding to reload the config file using the 'r' key:
-   ```
+   ```bash
    bind r source-file ~/.tmux.conf \; display "Config reloaded!"
    ```
 
@@ -74,7 +74,7 @@ This exercise will help you practice advanced Tmux techniques and customization 
    ```
 
 3. Make your script executable and test it:
-   ```
+   ```bash
    chmod +x dev-environment.sh
    ./dev-environment.sh
    ```
@@ -82,7 +82,7 @@ This exercise will help you practice advanced Tmux techniques and customization 
 ### 3. Advanced Copy Mode
 
 1. Configure vi-mode for copy operations in your `.tmux.conf`:
-   ```
+   ```bash
    setw -g mode-keys vi
    ```
 
@@ -103,14 +103,14 @@ This exercise will help you practice advanced Tmux techniques and customization 
 1. Create a session with multiple panes (at least 4)
 
 2. Enable synchronization so that typing in one pane inputs to all panes:
-   ```
+   ```bash
    :setw synchronize-panes on
    ```
 
 3. Try running commands that will display differently in each pane
 
 4. Turn synchronization off:
-   ```
+   ```bash
    :setw synchronize-panes off
    ```
 
@@ -119,7 +119,7 @@ This exercise will help you practice advanced Tmux techniques and customization 
 1. Create a complex layout with multiple panes
 
 2. Save your layout using:
-   ```
+   ```bash
    prefix + : select-layout
    prefix + : rename-layout custom1
    ```

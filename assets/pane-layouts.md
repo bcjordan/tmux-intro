@@ -5,7 +5,7 @@ tmux provides several built-in layouts that can be cycled through using `Prefix 
 ## Even Horizontal
 Panes are arranged side by side, all with equal width.
 
-```
+```ascii
 ┌────────┬────────┬────────┐
 │        │        │        │
 │        │        │        │
@@ -19,7 +19,7 @@ Panes are arranged side by side, all with equal width.
 ## Even Vertical
 Panes are stacked on top of each other, all with equal height.
 
-```
+```ascii
 ┌─────────────────────────┐
 │                         │
 │                         │
@@ -35,7 +35,7 @@ Panes are stacked on top of each other, all with equal height.
 ## Main Horizontal
 One large pane at the top, with smaller panes of equal size below.
 
-```
+```ascii
 ┌─────────────────────────┐
 │                         │
 │                         │
@@ -49,7 +49,7 @@ One large pane at the top, with smaller panes of equal size below.
 ## Main Vertical
 One large pane on the left, with smaller panes of equal size to the right.
 
-```
+```ascii
 ┌────────┬─────────────────┐
 │        │                 │
 │        │                 │
@@ -64,7 +64,7 @@ One large pane on the left, with smaller panes of equal size to the right.
 ## Tiled
 All panes are arranged to have the same size.
 
-```
+```ascii
 ┌────────┬────────┐
 │        │        │
 │        │        │

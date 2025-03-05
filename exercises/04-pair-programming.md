@@ -15,17 +15,17 @@ Let's start by creating a session that can be shared between two developers.
 ### Host Setup
 
 1. On the host machine, start a new tmux session:
-   ```
+   ```bash
    tmux new-session -s pair
    ```
 
 2. Allow session sharing by setting up socket permissions (optional if on same user account):
-   ```
+   ```bash
    chmod 777 /tmp/tmux-$(id -u)/default
    ```
 
 3. Create a useful layout for your pair programming session:
-   ```
+   ```bash
    <prefix> P
    ```
    This will create the predefined pair programming layout from our configuration.
@@ -33,12 +33,12 @@ Let's start by creating a session that can be shared between two developers.
 ### Client Connection
 
 4. On the client machine, connect to the host:
-   ```
+   ```bash
    ssh user@host
    ```
 
 5. Attach to the existing session:
-   ```
+   ```bash
    tmux attach-session -t pair
    ```
 
@@ -52,7 +52,7 @@ Let's configure a workspace optimized for two developers working together.
    - Equal split panes for coding (side by side)
    - A bottom pane for running commands/tests
    
-   ```
+   ```bash
    # First, create or go to a window
    <prefix> 1
    
@@ -78,12 +78,12 @@ Let's configure a workspace optimized for two developers working together.
 Practice quickly switching between driver and navigator roles.
 
 1. As the driver, start editing a file:
-   ```
+   ```bash
    vim example.js
    ```
 
 2. To switch roles, both users navigate to the other's pane:
-   ```
+   ```bash
    <prefix> l  (to move right)
    <prefix> h  (to move left)
    ```
@@ -98,17 +98,17 @@ Practice quickly switching between driver and navigator roles.
 Sometimes you want to type the same commands in multiple panes:
 
 1. Toggle synchronized panes:
-   ```
+   ```bash
    <prefix> s
    ```
 
 2. Type a command that should run in all selected panes:
-   ```
+   ```bash
    echo "This appears in all panes!"
    ```
 
 3. Toggle synchronized panes off when done:
-   ```
+   ```bash
    <prefix> s
    ```
 
@@ -117,30 +117,30 @@ Sometimes you want to type the same commands in multiple panes:
 Practice session management techniques during pair programming:
 
 1. Create a new window for research:
-   ```
+   ```bash
    <prefix> c
    ```
 
 2. Rename the window appropriately:
-   ```
+   ```bash
    <prefix> ,
    ```
    Type "research" and press Enter.
 
 3. Both users can switch between windows independently:
-   ```
+   ```bash
    <prefix> n  (next window)
    <prefix> p  (previous window)
    <prefix> window-number
    ```
 
 4. Use the window list to sync up if separated:
-   ```
+   ```bash
    <prefix> w
    ```
 
 5. To ensure both users see the same window:
-   ```
+   ```bash
    <prefix> :
    ```
    Then type: `select-window -t window-name`
@@ -150,7 +150,7 @@ Practice session management techniques during pair programming:
 If one developer is teaching or showing something to the other:
 
 1. Switch to the teaching layout:
-   ```
+   ```bash
    <prefix> T
    ```
 
@@ -173,7 +173,7 @@ Practice resolving conflicts when both users try to type at once:
    - Like pilots handing off flight controls
 
 2. Use visual indicators when someone needs attention:
-   ```
+   ```bash
    <prefix> C
    ```
    This clears the screen and history - useful as a visual signal.

@@ -72,7 +72,7 @@ setw -q -g utf8 on
 
 ## Performance Optimization
 
-### Reducing Latency
+## Reducing Latency
 ```bash
 # Reduce escape-time delay
 set -sg escape-time 0
@@ -189,7 +189,7 @@ tmux attach-session -t dev
 
 ## Integration with Other Tools
 
-#### Integrating with Vim
+## Integrating with Vim
 Using [Vim-Tmux-Navigator](https://github.com/christoomey/vim-tmux-navigator) for seamless navigation:
 
 ```bash
@@ -202,7 +202,7 @@ bind-key -n 'C-k' if-shell "$is_vim" 'send-keys C-k'  'select-pane -U'
 bind-key -n 'C-l' if-shell "$is_vim" 'send-keys C-l'  'select-pane -R'
 ```
 
-### Integrating with FZF
+## Integrating with FZF
 Using fzf for fuzzy finding:
 
 ```bash

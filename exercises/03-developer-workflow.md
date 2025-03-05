@@ -13,39 +13,39 @@ This exercise will help you become proficient with tmux for software development
 Let's start by creating a structured development session with multiple windows.
 
 1. Start a new tmux session named "dev":
-   ```
+   ```bash
    tmux new-session -s dev
    ```
 
 2. In the first window, rename it to "code":
-   ```
+   ```bash
    <prefix> ,
    ```
    Type "code" and press Enter.
 
 3. Create a second window named "server":
-   ```
+   ```bash
    <prefix> c
    <prefix> ,
    ```
    Type "server" and press Enter.
 
 4. Create a third window named "logs":
-   ```
+   ```bash
    <prefix> c
    <prefix> ,
    ```
    Type "logs" and press Enter.
 
 5. Create a fourth window named "git":
-   ```
+   ```bash
    <prefix> c
    <prefix> ,
    ```
    Type "git" and press Enter.
 
 6. Navigate between windows using:
-   ```
+   ```bash
    <prefix> n  (next window)
    <prefix> p  (previous window)
    <prefix> 1  (window #1)
@@ -58,17 +58,17 @@ Let's start by creating a structured development session with multiple windows.
 Let's configure the "code" window with a useful split layout.
 
 1. Go to the "code" window:
-   ```
+   ```bash
    <prefix> 1
    ```
 
 2. Split the window horizontally:
-   ```
+   ```bash
    <prefix> \
    ```
 
 3. In the right pane, split it vertically:
-   ```
+   ```bash
    <prefix> -
    ```
 
@@ -78,7 +78,7 @@ Let's configure the "code" window with a useful split layout.
    - Bottom-right: For running tests or commands
 
 5. Practice navigating between panes:
-   ```
+   ```bash
    <prefix> h  (left pane)
    <prefix> j  (down pane)
    <prefix> k  (up pane)
@@ -86,7 +86,7 @@ Let's configure the "code" window with a useful split layout.
    ```
 
 6. Resize panes:
-   ```
+   ```bash
    <prefix> Left/Right/Up/Down  (with arrow keys)
    ```
 
@@ -96,31 +96,31 @@ Let's practice a typical development workflow using our setup.
 
 1. In the "code" window, left pane:
    - Open a source code file:
-     ```
+     ```bash
      vim app.js  (or your preferred editor)
      ```
 
 2. In the top-right pane:
    - Open documentation or API reference:
-     ```
+     ```bash
      man node  (or any relevant documentation)
      ```
 
 3. In the "server" window:
    - Start your development server:
-     ```
+     ```bash
      python -m http.server  (or your project's server)
      ```
 
 4. In the "logs" window:
    - Watch logs:
-     ```
+     ```bash
      tail -f logs/development.log  (or relevant log file)
      ```
 
 5. In the "git" window:
    - Check git status and prepare a commit:
-     ```
+     ```bash
      git status
      git diff
      ```
@@ -130,27 +130,27 @@ Let's practice a typical development workflow using our setup.
 ## Exercise 4: Session Management
 
 1. Detach from your session:
-   ```
+   ```bash
    <prefix> d
    ```
 
 2. List available sessions:
-   ```
+   ```bash
    tmux ls
    ```
 
 3. Reattach to your session:
-   ```
+   ```bash
    tmux attach-session -t dev
    ```
 
 4. Create a second session without detaching (in another terminal):
-   ```
+   ```bash
    tmux new-session -s config
    ```
 
 5. Switch between sessions:
-   ```
+   ```bash
    <prefix> (  (previous session)
    <prefix> )  (next session)
    <prefix> s  (select from list)
@@ -163,7 +163,7 @@ Our developer configuration includes a predefined layout. Let's use it:
 1. Detach from any existing sessions.
 
 2. Press:
-   ```
+   ```bash
    <prefix> C-d
    ```
 

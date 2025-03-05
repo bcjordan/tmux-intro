@@ -13,12 +13,12 @@ This exercise will teach you how to use tmux for effective server administration
 Let's start by creating a monitoring dashboard for your servers.
 
 1. Start a new tmux session specifically for monitoring:
-   ```
+   ```bash
    tmux new-session -s monitoring
    ```
 
 2. Use the built-in monitoring layout:
-   ```
+   ```bash
    <prefix> M
    ```
 
@@ -33,7 +33,7 @@ Let's start by creating a monitoring dashboard for your servers.
    - Replace commands as needed
 
 5. Practice making one pane full-screen temporarily:
-   ```
+   ```bash
    <prefix> z
    ```
    Press the same combination again to restore the layout.
@@ -43,16 +43,16 @@ Let's start by creating a monitoring dashboard for your servers.
 System administrators often need to watch multiple log files simultaneously.
 
 1. Create a new window or session for log monitoring:
-   ```
+   ```bash
    <prefix> c
    ```
    or
-   ```
+   ```bash
    tmux new-session -s logs
    ```
 
 2. Use the built-in log monitoring layout:
-   ```
+   ```bash
    <prefix> L
    ```
 
@@ -74,29 +74,29 @@ System administrators often need to watch multiple log files simultaneously.
 Let's practice managing multiple servers simultaneously.
 
 1. Create a new session for multi-server management:
-   ```
+   ```bash
    tmux new-session -s servers
    ```
 
 2. Use the multi-server connection prompt:
-   ```
+   ```bash
    <prefix> H
    ```
 
 3. When prompted, enter a comma-separated list of servers:
-   ```
+   ```bash
    server1,server2,server3
    ```
 
 4. This will create a tiled layout with SSH connections to each server.
 
 5. Toggle synchronized panes to run the same command on all servers:
-   ```
+   ```bash
    <prefix> S
    ```
 
 6. Run some basic commands on all servers simultaneously:
-   ```
+   ```bash
    hostname
    uptime
    df -h
@@ -104,7 +104,7 @@ Let's practice managing multiple servers simultaneously.
    ```
 
 7. Turn off synchronization when done:
-   ```
+   ```bash
    <prefix> S
    ```
 
@@ -113,13 +113,13 @@ Let's practice managing multiple servers simultaneously.
 Practice common administrative tasks with tmux:
 
 1. Create a window with a suitable layout for package management:
-   ```
+   ```bash
    <prefix> c
    <prefix> |
    ```
 
 2. In the left pane, check for updates:
-   ```
+   ```bash
    # Debian/Ubuntu
    apt update
    
@@ -128,7 +128,7 @@ Practice common administrative tasks with tmux:
    ```
 
 3. In the right pane, review package information:
-   ```
+   ```bash
    # Debian/Ubuntu
    apt list --upgradable
    
@@ -137,18 +137,18 @@ Practice common administrative tasks with tmux:
    ```
 
 4. Use session management to save this state:
-   ```
+   ```bash
    <prefix> C-b
    ```
    When prompted, save as "maintenance"
 
 5. Detach from the session:
-   ```
+   ```bash
    <prefix> d
    ```
 
 6. Later, restore the session:
-   ```
+   ```bash
    <prefix> C-r
    ```
    When prompted, enter "maintenance"
@@ -158,12 +158,12 @@ Practice common administrative tasks with tmux:
 Let's simulate responding to a server issue:
 
 1. Create a new session:
-   ```
+   ```bash
    tmux new-session -s emergency
    ```
 
 2. Set up a troubleshooting layout:
-   ```
+   ```bash
    # Split into four panes
    <prefix> |
    <prefix> -
@@ -185,12 +185,12 @@ Let's simulate responding to a server issue:
 Practice a typical remote administration workflow:
 
 1. SSH into a remote server
-   ```
+   ```bash
    ssh user@server
    ```
 
 2. Start or attach to a tmux session:
-   ```
+   ```bash
    tmux a || tmux new-session -s remote
    ```
 
@@ -199,7 +199,7 @@ Practice a typical remote administration workflow:
 4. Simulate a network interruption by closing your terminal.
 
 5. Reconnect and attach to your session:
-   ```
+   ```bash
    ssh user@server
    tmux attach-session
    ```

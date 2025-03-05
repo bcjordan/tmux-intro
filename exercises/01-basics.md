@@ -10,33 +10,33 @@ This exercise will help you practice the fundamental Tmux commands and concepts 
 
 ### 1. Session Management
 1. Create a new session named "myproject"
-   ```
+   ```bash
    tmux new -s myproject
    ```
 
 2. Inside the session, detach from it using the key binding
-   ```
+   ```bash
    (Press Ctrl+b, then d)
    ```
 
 3. List all available sessions
-   ```
+   ```bash
    tmux ls
    ```
 
 4. Reattach to your "myproject" session
-   ```
+   ```bash
    tmux attach -t myproject
    ```
 
 5. Create a second session named "notes" and detach from it
-   ```
+   ```bash
    tmux new -s notes
    (Then press Ctrl+b, then d)
    ```
 
 6. Practice switching between sessions using the command line
-   ```
+   ```bash
    tmux attach -t myproject
    (Then press Ctrl+b, then d)
    tmux attach -t notes
@@ -44,64 +44,64 @@ This exercise will help you practice the fundamental Tmux commands and concepts 
 
 ### 2. Window Management
 1. Attach to your "myproject" session
-   ```
+   ```bash
    tmux attach -t myproject
    ```
 
 2. Create three new windows
-   ```
+   ```bash
    (Press Ctrl+b, then c) [3 times]
    ```
 
 3. Navigate between windows using the key bindings
-   ```
+   ```bash
    (Press Ctrl+b, then n) [to go to next window]
    (Press Ctrl+b, then p) [to go to previous window]
    (Press Ctrl+b, then 0-3) [to go to specific window by number]
    ```
 
 4. Rename the current window to "main"
-   ```
+   ```bash
    (Press Ctrl+b, then ,)
    [Type "main" and press Enter]
    ```
 
 5. Create a new window with a specific name
-   ```
+   ```bash
    (Press Ctrl+b, then :)
    [Type "new-window -n logs" and press Enter]
    ```
 
 ### 3. Pane Management
 1. Split the current window horizontally 
-   ```
+   ```bash
    (Press Ctrl+b, then ")
    ```
 
 2. Split the bottom pane vertically
-   ```
+   ```bash
    (Navigate to bottom pane with Ctrl+b, down arrow)
    (Press Ctrl+b, then %)
    ```
 
 3. Navigate between all panes
-   ```
+   ```bash
    (Press Ctrl+b, then arrow keys)
    ```
 
 4. Resize a pane
-   ```
+   ```bash
    (Press Ctrl+b, then Ctrl+arrow keys)
    ```
 
 5. Zoom in on a pane and zoom out
-   ```
+   ```bash
    (Press Ctrl+b, then z) [to zoom]
    (Press Ctrl+b, then z again) [to unzoom]
    ```
 
 6. Convert a pane to a window
-   ```
+   ```bash
    (Press Ctrl+b, then !)
    ```
 

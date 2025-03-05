@@ -114,7 +114,7 @@ tmux attach-session -t mysession
 
 ## Advanced Layouts
 
-```
+```bash
 # Main pane on left, others on right
 :select-layout main-vertical
 
@@ -162,7 +162,7 @@ echo "ls -la" > /tmp/tmux-pipe
 
 Useful for scripting and status line customization:
 
-```
+```bash
 #{session_name}     - Current session name
 #{window_index}     - Current window index
 #{window_name}      - Current window name

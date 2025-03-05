@@ -61,7 +61,7 @@ if-shell "uname -r | grep -q Microsoft" {
 }
 ```
 
-### Performance Issues
+## Performance Issues
 
 | Issue | Solution |
 |-------|----------|
@@ -143,7 +143,7 @@ sudo chown -R yourusername:yourusername /tmp/tmux-*
 TMUX_TMPDIR=~/tmux-sockets tmux
 ```
 
-### Resolving Terminal Capability Issues
+## Resolving Terminal Capability Issues
 
 If you have rendering issues, check your terminal capabilities:
 ```bash
@@ -154,7 +154,7 @@ echo $TERM
 infocmp $TERM
 ```
 
-### Tracking Down High CPU Usage
+## Tracking Down High CPU Usage
 
 1. Identify the session using high CPU with `top` or `htop`
 2. Simplify your status line complexity
